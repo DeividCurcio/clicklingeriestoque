@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Click Lingerie - Controle de Estoque</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-area">
+<h1>Click Lingerie</h1>
+<p>Controle de Estoque</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="form-section">
+<h2>Nova Entrada de Produto</h2>
+
+    <form id="formProduto">
+    <div class="form-grid">
+    <div>
+    <label>Data de Entrada</label>
+    <input type="date" id="dataEntrada" required>
+        </div>
+
+    <div>
+            <label>Produto</label>
+            <input type="text" id="nomeProduto" placeholder="Ex: Body Renda Floral" required>
+        </div>
+
+        <div>
+        <label>Quantidade</label>
+        <input type="number" id="quantidade" min="1" value="1" required>
+        </div>
+
+    <div class="tamanhos-grid">
+            <label>Tamanhos disponíveis</label>
+            <div class="tamanhos-checks">
+            <label><input type="checkbox" name="tamanho" value="P"> P</label>
+            <label><input type="checkbox" name="tamanho" value="M"> M</label>
+            <label><input type="checkbox" name="tamanho" value="G"> G</label>
+            <label><input type="checkbox" name="tamanho" value="GG"> GG</label>
+            <label><input type="checkbox" name="tamanho" value="XGG"> XGG</label>
+            </div>
+        </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">ADICIONAR AO ESTOQUE</button>
+    </form>
+    </section>
+
+<section class="tabela-section">
+<h2>Estoque Atual</h2>
+<div class="table-controls">
+        <input type="text" id="busca" placeholder="Buscar produto...">
+</div>
+
+    <table>
+        <thead>
+    <tr>
+            <th>Data Entrada</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Tamanhos</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody id="tbodyEstoque"></tbody>
+    </table>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
